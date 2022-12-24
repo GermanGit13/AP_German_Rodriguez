@@ -103,7 +103,6 @@ if (isset($_POST['submitAutodesk'])) {
     $version = $_POST['version'];
     $serial = $_POST['serial'];
     $unAutodesk = new Autodesk($model, $version, $serial);
-    $unOffice ->getOffice();
 }
 ?>
 

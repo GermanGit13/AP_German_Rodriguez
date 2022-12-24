@@ -39,7 +39,7 @@ $licencia = '0';
 <?php
 if (isset($_POST['submit'])) { //verificamos que se ha pulsado el boton enviar
    $licencia = $_POST['licencia'];
-   validar_licencia($licencia);
+   validar_licencia($licencia); //Nos lleva a Switch.php
 }
 ?>
 

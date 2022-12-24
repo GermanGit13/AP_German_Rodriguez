@@ -22,7 +22,7 @@ function versionAutodesk($type, $modelA) {
                 // dentro de este PRINT podremos picar código HTML, y será interpretado sin problema
                 print <<<HERE
                 <div class="card" style="width: 18rem;">
-                  <img src="../img/office2016.jpg" class="card-img-top" alt="...">
+                  <img src="../img/autocad.png" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Licencia Autocad 2019</h5>
                     <p class="card-text">$autocad2019</p>
@@ -33,7 +33,7 @@ HERE;
             } elseif ($modelA == 'Autocad2020') {
                 print <<<HERE
                 <div class="card" style="width: 18rem;">
-                  <img src="../img/office2019.png" class="card-img-top" alt="...">
+                  <img src="../img/autocad.png" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Licencia Autocad 2020</h5>
                     <p class="card-text">$autocad2020</p>
@@ -44,7 +44,7 @@ HERE;
             } elseif ($modelA == 'Autocad2022') {
                 print <<<HERE
                 <div class="card" style="width: 18rem;">
-                  <img src="../img/office365.png" class="card-img-top" alt="...">
+                  <img src="../img/autocad.png" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Licencia Autocad 2022</h5>
                     <p class="card-text">$autocad2022</p>
@@ -62,7 +62,7 @@ HERE;
         } elseif ($type == 'Revit') { //ElseIf para verificar que recibo Revit
             if ($modelA == 'Todas') {
 
-                echo "Entro en el while de Revit";
+//                echo "Entro en el elseif de Revit dentro del do";
                 showLicenciasAutodesk(); //Metodo para recorrer el Arrays y mostrarlo por pantalla dentro de las card ./Foreach.php
 
             } elseif ($modelA == 'Revit2019') {
@@ -70,7 +70,7 @@ HERE;
                 // dentro de este PRINT podremos picar código HTML, y será interpretado sin problema
                 print <<<HERE
         <div class="card" style="width: 18rem;">
-          <img src="../img/office2016.jpg" class="card-img-top" alt="...">
+          <img src="../img/revit.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Licencia Revit 2019</h5>
             <p class="card-text">$revit2019</p>
@@ -83,7 +83,7 @@ HERE;
 
                 print <<<HERE
         <div class="card" style="width: 18rem;">
-          <img src="../img/office2019.png" class="card-img-top" alt="...">
+          <img src="../img/revit.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Licencia Autocad 2020</h5>
             <p class="card-text">$revit2020</p>
@@ -96,7 +96,7 @@ HERE;
 
                 print <<<HERE
         <div class="card" style="width: 18rem;">
-          <img src="../img/office365.png" class="card-img-top" alt="...">
+          <img src="../img/revit.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Licencia Autocad 2022</h5>
             <p class="card-text">$revit2022</p>
