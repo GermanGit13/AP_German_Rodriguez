@@ -1,7 +1,32 @@
 <?php
+session_start(); //Inicializa la sesión en PHP
 include("./funciones/IF_ELSE.php"); // Para incluir la validacion cathca creada para poder usar un IF-ELSE
 include ("./funciones/While.php"); //Para poder usar la funcion de validar el catcha
+function validar ($user, $pass) {
+    $users = array("german" => "123456"); //usuario y contraseña
+    //Comprobamos si dichos valores existen en nuestro array
+    if (isset($users[$user])&& ($users[$user] == $pass)) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
+//Siempre primero ejecutar el validar para ver si se manda a los header o no
+//codigo principal de la validacion
+//función header de PHP envia un mensaje en ventana emergente de autentificación requerida
+//Los datos de usuario y contraseña que rellena el usuario se guardan en las variables predeterminadas PHP_AUTH_USER y PHP_AUTH_PW
+//_SERVER -> VARIABLE SUPER GLOBAL-> DONDE SE ENCUENTRAN LOCALIZADAS LAS ANTERIORES VARIABLES
+if (!validar($_SERVER['PHP_AUTH_USER'],$_SERVER['PHP_AUTH_PW'])) {
+    header('WWW-Authenticate:Basic realm = "Mi zona Web"');
+    header('HTTP/1.0 401 Unauthorized');
+    echo "Usuario y contraseña incorrectos";
+    exit;
+} else {
+    echo "Bienvenido/a " .$_SERVER['PHP_AUTH_USER'];
+}
+
+$_SESSION["nombre"] = $_SERVER['PHP_AUTH_USER']; //guardo el inicio de usuario en una sesion
 
 $catcha = 0; //Creamos la variable a 0 para poder realizar una simulación de rol y jugar con el if - else de abajo
 

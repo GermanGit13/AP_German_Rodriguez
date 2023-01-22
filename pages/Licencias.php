@@ -1,4 +1,14 @@
 <?php
+//siempre poner session_start() para recuperar la sesión si está iniciada
+session_start();
+if(!isset($_SESSION['nombre']))
+{
+    echo "No hay sesión activa";
+
+}else{
+    echo "Sesion Activa: " .$_SESSION['nombre'];
+}
+
 include("header.php");//Creo un página para la cabecera y con include la uso
 include("../funciones/Switch.php");//Creo un página para la cabecera y con include la uso
 $licencia = '0';

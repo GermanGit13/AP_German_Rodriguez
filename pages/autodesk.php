@@ -1,4 +1,14 @@
 <?php
+//siempre poner session_start() para recuperar la sesión si está iniciada
+session_start();
+if(!isset($_SESSION['nombre']))
+{
+    echo "No hay sesión activa";
+
+}else{
+    echo "Sesion Activa: " .$_SESSION['nombre'];
+}
+
 include("header.php");//Creo un página para la cabecera y con include la uso
 include ("../funciones/IF_ELSE.php"); //Para poder usar la funcion que presenta el siguiente formulario si hemos seleccionado Autodesk
 include("../funciones/Do_While.php"); //Prar poder usar las funciones que presentan las licencias de revit y autocad
