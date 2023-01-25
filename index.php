@@ -1,4 +1,10 @@
 <?php
+//setcookie(name, value, expires, path, domain, secure, httponly)
+//Para crearla: nombre de la cookie, descripción, tiempo de duración, path: ruta donde se guarda sino ponemos nada va a localhost
+//luego va domain y subdominios, luego secure que fuerza la cookie si se ha establecido una conexión segura sino poner en false
+//hhtpponly solo estaría disponible para http por ejemplo hjavasript no estaria disponible, si metemos javasript debemos poner esto en false
+setcookie("nombre", "Esta es la descripción de la cookie",time() + 900);
+
 session_start(); //Inicializa la sesión en PHP
 include("./funciones/IF_ELSE.php"); // Para incluir la validacion cathca creada para poder usar un IF-ELSE
 include ("./funciones/While.php"); //Para poder usar la funcion de validar el catcha
