@@ -1,4 +1,5 @@
 <?php
+setcookie("user", "german", time() + 900);
 //siempre poner session_start() para recuperar la sesión si está iniciada
 session_start();
 if(!isset($_SESSION['nombre']))
